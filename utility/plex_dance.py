@@ -62,9 +62,9 @@ PLEX_TOKEN = ''
 IGNORE_FILE = "# Ignoring below file for Plex Dance\n{}"
 
 if not PLEX_TOKEN:
-    PLEX_TOKEN = CONFIG.data['auth'].get('server_token')
+    PLEX_TOKEN = CONFIG.get('auth.server_token')
 if not PLEX_URL:
-    PLEX_URL = CONFIG.data['auth'].get('server_baseurl')
+    PLEX_URL = CONFIG.get('auth.server_baseurl')
 
 session = requests.Session()
 # Ignore verifying the SSL certificate

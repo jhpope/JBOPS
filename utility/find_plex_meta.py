@@ -25,8 +25,8 @@ import requests
 # ## Edit ##
 PLEX_URL = ''
 PLEX_TOKEN = ''
-PLEX_URL = CONFIG.data['auth'].get('server_baseurl', PLEX_URL)
-PLEX_TOKEN = CONFIG.data['auth'].get('server_token', PLEX_TOKEN)
+PLEX_URL = CONFIG.get('auth.server_baseurl', PLEX_URL)
+PLEX_TOKEN = CONFIG.get('auth.server_token', PLEX_TOKEN)
 # Change directory based on your os see:
 # https://support.plex.tv/hc/en-us/articles/202915258-Where-is-the-Plex-Media-Server-data-directory-located-
 PLEX_LOCAL_TV_PATH = os.path.join(os.getenv('LOCALAPPDATA'), 'Plex Media Server\Metadata\TV Shows')

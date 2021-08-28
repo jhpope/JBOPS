@@ -28,13 +28,13 @@ from plexapi.server import PlexServer, CONFIG
 
 TAUTULLI_URL = ''
 TAUTULLI_APIKEY = ''
-TAUTULLI_URL = CONFIG.data['auth'].get('tautulli_baseurl', TAUTULLI_URL)
-TAUTULLI_APIKEY = CONFIG.data['auth'].get('tautulli_apikey', TAUTULLI_APIKEY)
+TAUTULLI_URL = CONFIG.get('auth.tautulli_baseurl', TAUTULLI_URL)
+TAUTULLI_APIKEY = CONFIG.get('auth.tautulli_apikey', TAUTULLI_APIKEY)
 
 PLEX_URL = ''
 PLEX_TOKEN = ''
-PLEX_URL = CONFIG.data['auth'].get('server_baseurl', PLEX_URL)
-PLEX_TOKEN = CONFIG.data['auth'].get('server_token', PLEX_TOKEN)
+PLEX_URL = CONFIG.get('auth.server_baseurl', PLEX_URL)
+PLEX_TOKEN = CONFIG.get('auth.server_token', PLEX_TOKEN)
 
 # Sections to ignore from comparision.
 IGNORE_LST = ['Library name']

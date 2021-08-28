@@ -28,8 +28,8 @@ import random
 # Edit
 PLEX_URL = ''
 PLEX_TOKEN = ''
-PLEX_URL = CONFIG.data['auth'].get('server_baseurl', PLEX_URL)
-PLEX_TOKEN = CONFIG.data['auth'].get('server_token', PLEX_TOKEN)
+PLEX_URL = CONFIG.get('auth.server_baseurl', PLEX_URL)
+PLEX_TOKEN = CONFIG.get('auth.server_token', PLEX_TOKEN)
 
 LIBRARY_EXCLUDE = ['Audio Books', 'Podcasts', 'Soundtracks']
 DEFAULT_NAME = 'Popular Music Playlist'

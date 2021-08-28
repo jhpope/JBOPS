@@ -20,10 +20,10 @@ TAUTULLI_BASEURL = ''
 TAUTULLI_APIKEY = ''
 
 # Dont Edit Below #
-TAUTULLI_BASEURL = TAUTULLI_BASEURL or CONFIG.data['auth'].get('tautulli_baseurl')
-TAUTULLI_APIKEY = TAUTULLI_APIKEY or CONFIG.data['auth'].get('tautulli_apikey')
-OMBI_BASEURL = OMBI_BASEURL or CONFIG.data['auth'].get('ombi_baseurl')
-OMBI_APIKEY = OMBI_APIKEY or CONFIG.data['auth'].get('ombi_apikey')
+TAUTULLI_BASEURL = TAUTULLI_BASEURL or CONFIG.get('auth.tautulli_baseurl')
+TAUTULLI_APIKEY = TAUTULLI_APIKEY or CONFIG.get('auth.tautulli_apikey')
+OMBI_BASEURL = OMBI_BASEURL or CONFIG.get('auth.ombi_baseurl')
+OMBI_APIKEY = OMBI_APIKEY or CONFIG.get('auth.ombi_apikey')
 
 disable_warnings(InsecureRequestWarning)
 SESSION = Session()

@@ -26,10 +26,10 @@ BACKUP_DB = True
 # Do not edit past this line #
 
 # Grab config vars if not set in script
-TAUTULLI_URL = TAUTULLI_URL or CONFIG.data['auth'].get('tautulli_baseurl')
-TAUTULLI_API_KEY = TAUTULLI_API_KEY or CONFIG.data['auth'].get('tautulli_apikey')
-PLEX_USERNAME = PLEX_USERNAME or CONFIG.data['auth'].get('myplex_username')
-PLEX_PASSWORD = PLEX_PASSWORD or CONFIG.data['auth'].get('myplex_password')
+TAUTULLI_URL = TAUTULLI_URL or CONFIG.get('auth.tautulli_baseurl')
+TAUTULLI_API_KEY = TAUTULLI_API_KEY or CONFIG.get('auth.tautulli_apikey')
+PLEX_USERNAME = PLEX_USERNAME or CONFIG.get('auth.myplex_username')
+PLEX_PASSWORD = PLEX_PASSWORD or CONFIG.get('auth.myplex_password')
 
 account = MyPlexAccount(PLEX_USERNAME, PLEX_PASSWORD)
 

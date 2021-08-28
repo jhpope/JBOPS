@@ -49,8 +49,8 @@ MESSAGE = "GET TO BED!"
 
 PLEX_URL = ''
 PLEX_TOKEN = ''
-PLEX_URL = CONFIG.data['auth'].get('server_baseurl', PLEX_URL)
-PLEX_TOKEN = CONFIG.data['auth'].get('server_token', PLEX_TOKEN)
+PLEX_URL = CONFIG.get('auth.server_baseurl', PLEX_URL)
+PLEX_TOKEN = CONFIG.get('auth.server_token', PLEX_TOKEN)
 
 sess = requests.Session()
 # Ignore verifying the SSL certificate

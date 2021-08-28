@@ -31,10 +31,10 @@ DRY_RUN = True
 
 # CODE BELOW #
 
-PLEX_URL = PLEX_URL or CONFIG.data['auth'].get('server_baseurl')
-PLEX_TOKEN = PLEX_TOKEN or CONFIG.data['auth'].get('server_token')
-TAUTULLI_URL = TAUTULLI_URL or CONFIG.data['auth'].get('tautulli_baseurl')
-TAUTULLI_APIKEY = TAUTULLI_APIKEY or CONFIG.data['auth'].get('tautulli_apikey')
+PLEX_URL = PLEX_URL or CONFIG.get('auth.server_baseurl')
+PLEX_TOKEN = PLEX_TOKEN or CONFIG.get('auth.server_token')
+TAUTULLI_URL = TAUTULLI_URL or CONFIG.get('auth.tautulli_baseurl')
+TAUTULLI_APIKEY = TAUTULLI_APIKEY or CONFIG.get('auth.tautulli_apikey')
 USERNAME_IGNORE = [username.lower() for username in USERNAME_IGNORE]
 SESSION = Session()
 # Ignore verifying the SSL certificate

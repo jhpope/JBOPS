@@ -25,9 +25,9 @@ MUSIC_LIBRARY_NAME = 'Music'
 ## CODE BELOW ##
 
 if not PLEX_URL:
-    PLEX_URL = CONFIG.data['auth'].get('server_baseurl')
+    PLEX_URL = CONFIG.get('auth.server_baseurl')
 if not PLEX_TOKEN:
-    PLEX_TOKEN = CONFIG.data['auth'].get('server_token')
+    PLEX_TOKEN = CONFIG.get('auth.server_token')
 
 # Connect to Plex Server
 sess = requests.Session()

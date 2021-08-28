@@ -32,11 +32,11 @@ TAUTULLI_APIKEY = ''
 TAUTULLI_PUBLIC_URL = '0'
 
 if not TAUTULLI_URL:
-    TAUTULLI_URL = CONFIG.data['auth'].get('tautulli_baseurl')
+    TAUTULLI_URL = CONFIG.get('auth.tautulli_baseurl')
 if not TAUTULLI_APIKEY:
-    TAUTULLI_APIKEY = CONFIG.data['auth'].get('tautulli_apikey')
+    TAUTULLI_APIKEY = CONFIG.get('auth.tautulli_apikey')
 if not TAUTULLI_PUBLIC_URL:
-    TAUTULLI_PUBLIC_URL = CONFIG.data['auth'].get('tautulli_public_url')
+    TAUTULLI_PUBLIC_URL = CONFIG.get('auth.tautulli_public_url')
     
 VERIFY_SSL = False
 

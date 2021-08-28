@@ -23,8 +23,8 @@ THRESHOLD_PERCENT = 50
 
 # Do not edit past this line #
 
-TAUTULLI_URL = TAUTULLI_URL or CONFIG.data['auth'].get('tautulli_baseurl')
-TAUTULLI_API_KEY = TAUTULLI_API_KEY or CONFIG.data['auth'].get('tautulli_apikey')
+TAUTULLI_URL = TAUTULLI_URL or CONFIG.get('auth.tautulli_baseurl')
+TAUTULLI_API_KEY = TAUTULLI_API_KEY or CONFIG.get('auth.tautulli_apikey')
 
 TODAY = date.today()
 START_DATE = TODAY - timedelta(days=PAST_DAYS)

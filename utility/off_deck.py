@@ -37,10 +37,10 @@ PLEX_URL = ''
 PLEX_TOKEN = ''
 
 if not PLEX_URL:
-    PLEX_URL = CONFIG.data['auth'].get('server_baseurl', '')
+    PLEX_URL = CONFIG.get('auth.server_baseurl', '')
 
 if not PLEX_TOKEN:
-    PLEX_TOKEN = CONFIG.data['auth'].get('server_token', '')
+    PLEX_TOKEN = CONFIG.get('auth.server_token', '')
 
 sess = requests.Session()
 # Ignore verifying the SSL certificate

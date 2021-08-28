@@ -32,8 +32,8 @@ from plexapi.server import PlexServer, CONFIG
 
 PLEX_URL = ''
 PLEX_TOKEN = ''
-PLEX_URL = CONFIG.data['auth'].get('server_baseurl', PLEX_URL)
-PLEX_TOKEN = CONFIG.data['auth'].get('server_token', PLEX_TOKEN)
+PLEX_URL = CONFIG.get('auth.server_baseurl', PLEX_URL)
+PLEX_TOKEN = CONFIG.get('auth.server_token', PLEX_TOKEN)
 
 # Allowed days/episodes to keep or delete
 WATCHED_LST = [0, 1, 7]
